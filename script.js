@@ -55,6 +55,9 @@ const copy = {
     "phone.title": "自拍照",
     "phone.body": "",
     "ending.body": "那天最珍貴的，不只是我們簽下名字，而是你們都在。謝謝大家陪我們走完這個早上，我們會永遠記得這一天！",
+    "footer.photo": "攝影: Heng-Jui Chang",
+    "footer.driver": "司機 & 助理: Ed Chen",
+    "footer.credit": "Yung-Sung Chuang & Codex w/ GPT 5.5 Extra High © 2026",
   },
   en: {
     "nav.morning": "Morning",
@@ -83,7 +86,7 @@ const copy = {
     "waiting.body": "Friends and family arrived one by one. We waited for our number, signed the paperwork, took photos, talked, and let the ordinary City Hall morning slowly become ours.",
     "waiting.edchenCaption": "Everyone sneaking in a selfie with us from outside",
     "signing.label": "Signing",
-    "signing.title": "Names on paper, then upstairs.",
+    "signing.title": "After signing, we walked to the ceremony room.",
     "ceremony.title": "The ceremony began.",
     "ceremony.body": "The room was small, and everyone stood close. The vows came first, then the rings; cameras were up, people were laughing, and the room felt happily alive.",
     "proof.title": "We were married.",
@@ -95,6 +98,9 @@ const copy = {
     "phone.title": "Selfies",
     "phone.body": "",
     "ending.body": "The most precious part was not only signing our names. It was having you there with us. Thank you for walking through that morning with us. We will remember this day forever.",
+    "footer.photo": "Photography: Heng-Jui Chang",
+    "footer.driver": "Driver & Assistant: Ed Chen",
+    "footer.credit": "Yung-Sung Chuang & Codex w/ GPT 5.5 Extra High © 2026",
   },
 };
 
