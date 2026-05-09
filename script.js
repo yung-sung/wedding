@@ -50,7 +50,6 @@ const copy = {
     "proof.body": "證書拿在手上時，才突然有一種事情完成了的感覺。",
     "outside.title": "回到市政廳外面。",
     "outside.body": "拍完朋友和家人的合照後，剛好遇到波士頓警察摩托車隊，熱情地加入一起拍照的行列。",
-    "outside.police": "這張很意外，也很值得留下。",
     "phone.label": "Selfies",
     "phone.title": "自拍照",
     "phone.body": "",
@@ -93,7 +92,6 @@ const copy = {
     "proof.body": "Holding the certificate made it feel real in a way the morning had been leading toward.",
     "outside.title": "Back outside City Hall.",
     "outside.body": "After group photos with friends and family, the Boston Police motorcycle unit warmly joined in for a few photos.",
-    "outside.police": "Unexpected, and absolutely worth keeping.",
     "phone.label": "Selfies",
     "phone.title": "Selfies",
     "phone.body": "",
@@ -120,6 +118,15 @@ function saveLanguage(language) {
   }
 }
 
+function getRequestedLanguage() {
+  const params = new URLSearchParams(window.location.search);
+  const requested = params.get("lang");
+  if (requested === "en" || requested === "zh") return requested;
+
+  const pathParts = window.location.pathname.split("/").filter(Boolean);
+  return pathParts.includes("en") ? "en" : null;
+}
+
 function applyLanguage(language) {
   const dictionary = copy[language] || copy.zh;
   translatableItems.forEach((item) => {
@@ -135,7 +142,9 @@ function applyLanguage(language) {
   );
 }
 
-let currentLanguage = getSavedLanguage() === "en" ? "en" : "zh";
+const requestedLanguage = getRequestedLanguage();
+let currentLanguage =
+  requestedLanguage || (getSavedLanguage() === "en" ? "en" : "zh");
 
 languageToggle.addEventListener("click", () => {
   currentLanguage = currentLanguage === "en" ? "zh" : "en";
