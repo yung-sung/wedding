@@ -1063,9 +1063,14 @@ p {
     gap: 16px;
   }
 
+  .proposal-track {
+    align-items: flex-start;
+  }
+
   .proposal-photo {
-    height: min(62vh, 520px);
-    min-height: 360px;
+    flex-basis: calc((100% - 14px) / 1.25);
+    height: auto;
+    min-height: 0;
   }
 }
 
