@@ -1068,9 +1068,17 @@ p {
   }
 
   .proposal-photo {
-    flex-basis: calc((100% - 14px) / 1.25);
-    height: auto;
+    flex-basis: auto;
+    height: clamp(280px, 88vw, 390px);
     min-height: 0;
+  }
+
+  .proposal-photo.portrait {
+    width: clamp(187px, 58.7vw, 260px);
+  }
+
+  .proposal-photo.landscape {
+    width: clamp(420px, 132vw, 585px);
   }
 }
 
